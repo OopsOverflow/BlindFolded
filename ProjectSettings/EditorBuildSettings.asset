@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Test ForceField.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/SampleScene.unity
+    guid: f4f8dcae97ad44286aa8b38ef53e9e55
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 21abb14dbd4e54d7b92f9682ab52079f, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: bc803e3d7cfde4d0ebd8a6729b06cf55, type: 2}

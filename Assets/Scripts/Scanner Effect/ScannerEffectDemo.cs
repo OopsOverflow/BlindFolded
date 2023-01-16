@@ -1,15 +1,16 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 using Scanner_Effect;
 
 [ExecuteInEditMode]
 public class ScannerEffectDemo : MonoBehaviour
 {
-	public Transform ScannerOrigin;
 	public Material EffectMaterial;
 	public float ScanDistance;
 	public float ScanVelocity = 50;
 	public float MaxScanDistance = 10;
+	public Transform initialPosition;
 
 	private Camera _camera;
 
@@ -17,10 +18,17 @@ public class ScannerEffectDemo : MonoBehaviour
 	bool _scanning;
 	Scannable[] _scannables;
 
+	private void OnCollisionEnter(Collision collision)
+	{
+		_scanning = true;
+		ScanDistance = 0;
+	}
+
 	void Start()
 	{
 		_scannables = FindObjectsOfType<Scannable>();
-    }
+		initialPosition = transform.gameObject.transform;
+	}
 
 	void Update()
 	{
@@ -31,7 +39,7 @@ public class ScannerEffectDemo : MonoBehaviour
 				ScanDistance += Time.deltaTime * ScanVelocity;
 				foreach (Scannable s in _scannables)
 				{
-					if (Vector3.Distance(ScannerOrigin.position, s.transform.position) <= ScanDistance)
+					if (Vector3.Distance(transform.position, initialPosition.position) <= ScanDistance)
 						s.Ping();
 				}
 			}
@@ -58,7 +66,7 @@ public class ScannerEffectDemo : MonoBehaviour
 			{
 				_scanning = true;
 				ScanDistance = 0;
-				ScannerOrigin.position = hit.point;
+				//ScannerOrigin.position = hit.point;
 			}
 		}
 	}
@@ -73,7 +81,7 @@ public class ScannerEffectDemo : MonoBehaviour
 	[ImageEffectOpaque]
 	void OnRenderImage(RenderTexture src, RenderTexture dst)
 	{
-		EffectMaterial.SetVector("_WorldSpaceScannerPos", ScannerOrigin.position);
+		EffectMaterial.SetVector("_WorldSpaceScannerPos", initialPosition.position);
 		EffectMaterial.SetFloat("_ScanDistance", ScanDistance);
 		RaycastCornerBlit(src, dst, EffectMaterial);
 	}
@@ -139,4 +147,5 @@ public class ScannerEffectDemo : MonoBehaviour
 		GL.End();
 		GL.PopMatrix();
 	}
+	
 }

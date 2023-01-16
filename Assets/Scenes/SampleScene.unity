@@ -959,7 +959,8 @@ MonoBehaviour:
   ScannerOrigin: {fileID: 1532998760}
   EffectMaterial: {fileID: 2100000, guid: 0d9079b2a57addc42bc122b2732e59b1, type: 2}
   ScanDistance: 0
-  ScanVelocity: 10
+  ScanVelocity: 3
+  MaxScanDistance: 5
 --- !u!4 &74424510 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 493472, guid: ca5c291357dc8c54bbb0f485cdccdf17, type: 3}

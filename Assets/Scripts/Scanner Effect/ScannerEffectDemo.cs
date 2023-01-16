@@ -9,6 +9,7 @@ public class ScannerEffectDemo : MonoBehaviour
 	public Material EffectMaterial;
 	public float ScanDistance;
 	public float ScanVelocity = 50;
+	public float MaxScanDistance = 10;
 
 	private Camera _camera;
 
@@ -25,7 +26,7 @@ public class ScannerEffectDemo : MonoBehaviour
 	{
 		if (_scanning)
 		{
-			if (ScanDistance <= 10)
+			if (ScanDistance <= MaxScanDistance)
 			{
 				ScanDistance += Time.deltaTime * ScanVelocity;
 				foreach (Scannable s in _scannables)
@@ -33,6 +34,11 @@ public class ScannerEffectDemo : MonoBehaviour
 					if (Vector3.Distance(ScannerOrigin.position, s.transform.position) <= ScanDistance)
 						s.Ping();
 				}
+			}
+			else
+			{
+				_scanning = false;
+				ScanDistance = 0;
 			}
 
 		}

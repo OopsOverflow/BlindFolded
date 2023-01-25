@@ -284,7 +284,7 @@
                 {
                     "name": "",
                     "id": "71a4d23f-3e9a-4513-923b-ba388c5e84bf",
-                    "path": "<XRController>{LeftHand}/gripPressed",
+                    "path": "<XRController>{LeftHand}/triggerPressed",
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
@@ -474,9 +474,9 @@
                 },
                 {
                     "name": "Teleport Mode Activate",
-                    "type": "Value",
+                    "type": "Button",
                     "id": "a21db72c-4843-4839-b4d0-3ce8d287cb86",
-                    "expectedControlType": "Vector2",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -523,17 +523,6 @@
                 },
                 {
                     "name": "",
-                    "id": "8da6ed3a-f621-49fe-8c76-1f6b7d7754d6",
-                    "path": "<XRController>{LeftHand}/Primary2DAxis",
-                    "interactions": "Sector(directions=1)",
-                    "processors": "",
-                    "groups": "Noncontinuous Move",
-                    "action": "Teleport Mode Activate",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "b8aebee7-fa03-43d4-bfb7-77a3f87452cc",
                     "path": "<XRController>{LeftHand}/gripPressed",
                     "interactions": "",
@@ -562,6 +551,17 @@
                     "processors": "StickDeadzone",
                     "groups": "Continuous Move",
                     "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "41318eb3-693f-4e5f-bf24-06a480337ef6",
+                    "path": "<XRController>{LeftHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Teleport Mode Activate",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -802,7 +802,7 @@
                 {
                     "name": "",
                     "id": "1ce80054-410d-4112-a332-50faa7fb4f23",
-                    "path": "<XRController>{RightHand}/gripPressed",
+                    "path": "<XRController>{RightHand}/triggerPressed",
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",

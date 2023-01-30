@@ -246,7 +246,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -3454760112404588434}
-    m_Position: {x: 246.75, y: 15.5, z: 0}
+    m_Position: {x: 250, y: 20, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3200133917618035587}
     m_Position: {x: 500, y: 60, z: 0}
@@ -301,7 +301,7 @@ BlendTree:
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
-    m_DirectBlendParameter: Trigger
+    m_DirectBlendParameter: Grip
     m_Mirror: 0
   m_BlendParameter: Grip
   m_BlendParameterY: Trigger

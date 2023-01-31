@@ -7,8 +7,8 @@ public class SlimeBehaviour : MonoBehaviour
 {
 
     [SerializeField] public Transform chaseTarget; // The target to be chased
-    [SerializeField] public float withinRange; // The object max "visibility" distance
-    [SerializeField] public float innerRange; // The object min "visibility" distance (used to stop the walking animation)
+    [SerializeField] public float maxVisibility; // The object max "visibility" distance
+    [SerializeField] public float minVisibility; // The object min "visibility" distance (used to stop the walking animation)
     [SerializeField] public NavMeshAgent agent; // The NavMeshAgent component assigned to this GameObject
     Animator animator;
 
@@ -35,7 +35,7 @@ public class SlimeBehaviour : MonoBehaviour
         float distance = Vector3.Distance(chaseTarget.position, transform.position);
 
         // Check if it is within the range
-        if(distance <= withinRange && distance >= innerRange)
+        if(distance <= maxVisibility && distance >= minVisibility)
         {
             animator.SetBool("isMoving", true);  
             agent.SetDestination(chaseTarget.transform.position);

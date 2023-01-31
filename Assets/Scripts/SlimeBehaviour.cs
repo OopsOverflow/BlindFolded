@@ -1,21 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class SlimeBehaviour : MonoBehaviour
 {
 
-    [SerializeField] public Transform chaseTarget; //drag and stop player object in the inspector
-    [SerializeField] public float withinRange;
-    [SerializeField] public float speed;
+    [SerializeField] public Transform chaseTarget; // The target to be chased
+    [SerializeField] public float withinRange; // The object max "visibility" distance
+    [SerializeField] public float innerRange; // The object min "visibility" distance (used to stop the walking animation)
+    [SerializeField] public NavMeshAgent agent; // The NavMeshAgent component assigned to this GameObject
     Animator animator;
-
-    int counter = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        // Set the animator reference
         animator = GetComponent<Animator>();
     }
 
@@ -32,36 +31,14 @@ public class SlimeBehaviour : MonoBehaviour
 
     void chasePlayer()
     {
-        /*int seconds = 50;
-
-        if (counter < 3 * seconds)
-        {
-            Vector3 vector3 = new Vector3(0, 0, 0.008f);
-            transform.position += vector3;
-        }
-
-        if (counter == 3 * seconds)
-        {
-            animator.SetBool("isMoving", false);
-        }
-
-        counter ++;
-        if (counter == 6 * seconds)
-        {
-            counter = 0;
-            animator.SetBool("isMoving", true);
-        }*/
-
-        transform.LookAt(chaseTarget.position);
-
         // Get the distance between the player and enemy (this object)
         float distance = Vector3.Distance(chaseTarget.position, transform.position);
 
         // Check if it is within the range
-        if(distance <= withinRange && distance >= 0.05)
+        if(distance <= withinRange && distance >= innerRange)
         {
-            animator.SetBool("isMoving", true);
-            transform.position = Vector3.MoveTowards(transform.position, chaseTarget.transform.position, speed);    
+            animator.SetBool("isMoving", true);  
+            agent.SetDestination(chaseTarget.transform.position);
         } else {
             animator.SetBool("isMoving", false);
         }

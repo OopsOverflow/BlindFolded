@@ -19,8 +19,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 1728
-    height: 912
+    width: 1440
+    height: 850
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
@@ -1554,7 +1554,7 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/XRI/Settings/Resources
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: /Users/s0nn1/Desktop/projects/BlindFolded
+  m_LastProjectPath: /Users/andrea/Documents/GitHub/BlindFolded
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:

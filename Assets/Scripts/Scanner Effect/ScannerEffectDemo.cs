@@ -74,7 +74,7 @@ public class ScannerEffectDemo : MonoBehaviour
 
 	void OnEnable()
 	{
-		_camera = GetComponent<Camera>();
+		_camera = Camera.main;
 		_camera.depthTextureMode = DepthTextureMode.Depth;
 	}
 

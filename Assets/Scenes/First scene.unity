@@ -982,7 +982,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77c3a66df8561418c917223a307f3452, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifePoints: 10
+  maxLifePoints: 0
 --- !u!4 &74424510 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 493472, guid: ca5c291357dc8c54bbb0f485cdccdf17, type: 3}
@@ -3211,6 +3211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51199e2443e9f487ca6e14cae459f32d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxLifePoints: 0
   chaseTarget: {fileID: 65284394}
   maxVisibility: 8
   minVisibility: 1.5
@@ -3237,6 +3238,22 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!54 &1201204297
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201204290}
+  serializedVersion: 2
+  m_Mass: 4
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1224326554
 PrefabInstance:
   m_ObjectHideFlags: 0

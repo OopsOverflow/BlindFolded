@@ -1551,6 +1551,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 434853242}
+  - component: {fileID: 434853243}
   m_Layer: 0
   m_Name: Trees
   m_TagString: Untagged
@@ -1596,6 +1597,21 @@ Transform:
   m_Father: {fileID: 1403333752}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &434853243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434853241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b23340bc227f4ac293864396f06859df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 11400000, guid: fecf6a88644f42f0993c07873b24bdb9, type: 2}
+  exportAllChildren: 1
+  terrainSimplificationLevel: 0
 --- !u!1001 &441998448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4389,6 +4405,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1295939334}
+  - component: {fileID: 1295939335}
   m_Layer: 0
   m_Name: Rocks
   m_TagString: Untagged
@@ -4442,6 +4459,21 @@ Transform:
   m_Father: {fileID: 1403333752}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1295939335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295939333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b23340bc227f4ac293864396f06859df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 11400000, guid: a9791c2efefb41f0a2a0ac973eb20454, type: 2}
+  exportAllChildren: 1
+  terrainSimplificationLevel: 0
 --- !u!1001 &1324024135
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7138,6 +7170,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 437022, guid: 92cf6f122e5d4828b14f43b27613fe6a, type: 3}
   m_PrefabInstance: {fileID: 74667665}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1808021439
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1808021441}
+  - component: {fileID: 1808021440}
+  m_Layer: 0
+  m_Name: Steam Audio Static Mesh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1808021440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808021439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad61de0c805f4e6b9a32cbf2ff6d5701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asset: {fileID: 11400000, guid: 8814c55f9f157214c8c18a89f749fea4, type: 2}
+  sceneNameWhenExported: First scene
+--- !u!4 &1808021441
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808021439}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1810175296
 PrefabInstance:
   m_ObjectHideFlags: 0

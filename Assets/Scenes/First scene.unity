@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.2
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0017066688, g: 0.005130522, b: 0.013919427, a: 0.2}
+  m_IndirectSpecularColor: {r: 0.0017184869, g: 0.0051151975, b: 0.013856239, a: 0.2}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3670,7 +3670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxLifePoints: 0
-  chaseTarget: {fileID: 0}
+  chaseTarget: {fileID: 860098056}
   maxVisibility: 8
   minVisibility: 1.5
   agent: {fileID: 1201204294}

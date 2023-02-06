@@ -2185,7 +2185,7 @@ MonoBehaviour:
   interpolation: 0
   distanceAttenuation: 1
   distanceAttenuationInput: 1
-  distanceAttenuationValue: 0.18273352
+  distanceAttenuationValue: 0.09532839
   airAbsorption: 1
   airAbsorptionInput: 1
   airAbsorptionLow: 0.076
@@ -2209,7 +2209,7 @@ MonoBehaviour:
   transmissionMid: 1
   transmissionHigh: 1
   directMixLevel: 1
-  reflections: 0
+  reflections: 1
   reflectionsType: 0
   useDistanceCurveForReflections: 0
   currentBakedSource: {fileID: 0}
@@ -6568,7 +6568,7 @@ MonoBehaviour:
   transmissionMid: 1
   transmissionHigh: 1
   directMixLevel: 1
-  reflections: 0
+  reflections: 1
   reflectionsType: 0
   useDistanceCurveForReflections: 0
   currentBakedSource: {fileID: 0}
@@ -7407,7 +7407,7 @@ MonoBehaviour:
   interpolation: 0
   distanceAttenuation: 1
   distanceAttenuationInput: 1
-  distanceAttenuationValue: 0.18273352
+  distanceAttenuationValue: 0.09532839
   airAbsorption: 1
   airAbsorptionInput: 1
   airAbsorptionLow: 0.076
@@ -7431,7 +7431,7 @@ MonoBehaviour:
   transmissionMid: 1
   transmissionHigh: 1
   directMixLevel: 1
-  reflections: 0
+  reflections: 1
   reflectionsType: 0
   useDistanceCurveForReflections: 0
   currentBakedSource: {fileID: 0}
@@ -8292,12 +8292,12 @@ MonoBehaviour:
   interpolation: 0
   distanceAttenuation: 1
   distanceAttenuationInput: 1
-  distanceAttenuationValue: 0.18273352
+  distanceAttenuationValue: 0.24187405
   airAbsorption: 1
   airAbsorptionInput: 1
-  airAbsorptionLow: 1
-  airAbsorptionMid: 0.887
-  airAbsorptionHigh: 0.705
+  airAbsorptionLow: 0.076
+  airAbsorptionMid: 0.436
+  airAbsorptionHigh: 0.635
   directivity: 0
   directivityInput: 0
   dipoleWeight: 0
@@ -8305,18 +8305,18 @@ MonoBehaviour:
   directivityValue: 1
   occlusion: 1
   occlusionInput: 0
-  occlusionType: 1
+  occlusionType: 0
   occlusionRadius: 1
   occlusionSamples: 10
   occlusionValue: 1
-  transmission: 0
+  transmission: 1
   transmissionType: 0
   transmissionInput: 0
-  transmissionLow: 1
-  transmissionMid: 1
-  transmissionHigh: 1
+  transmissionLow: 0.07
+  transmissionMid: 0.014
+  transmissionHigh: 0.005
   directMixLevel: 1
-  reflections: 0
+  reflections: 1
   reflectionsType: 0
   useDistanceCurveForReflections: 0
   currentBakedSource: {fileID: 0}

@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys: 0100000007000000
   Values:
-  - featureSets: []
+  - featureSets:
+    - com.HTC.openxr.featureset.vive
   - featureSets: []

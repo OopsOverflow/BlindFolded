@@ -1,89 +1,59 @@
-﻿using System;
-using UnityEngine;
-using System.Collections;
-using Scanner_Effect;
+﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 [ExecuteInEditMode]
-public class ScannerEffectDemo : MonoBehaviour
+public class SoundWaveEffect : MonoBehaviour
 {
-	public Material EffectMaterial;
-	public float ScanDistance;
-	public float ScanVelocity = 50;
-	public float MaxScanDistance = 10;
-	public Transform initialPosition;
-
-	private Camera _camera;
-
-	// Demo Code
+	public Transform scannerOrigin;
+	public Material effectMaterial;
+	public float scanDistance;
+	public float maxScanDistance;
+	public float scanVelocity = 50;
+	public Camera _camera;
+	public static SoundWaveEffect instance;
 	bool _scanning;
-	Scannable[] _scannables;
 
-	private void OnCollisionEnter(Collision collision)
-	{
-		_scanning = true;
-		ScanDistance = 0;
-	}
-
-	void Start()
-	{
-		_scannables = FindObjectsOfType<Scannable>();
-		initialPosition = transform.gameObject.transform;
-	}
 
 	void Update()
 	{
 		if (_scanning)
 		{
-			if (ScanDistance <= MaxScanDistance)
+			if (scanDistance < maxScanDistance)
 			{
-				ScanDistance += Time.deltaTime * ScanVelocity;
-				foreach (Scannable s in _scannables)
-				{
-					if (Vector3.Distance(transform.position, initialPosition.position) <= ScanDistance)
-						s.Ping();
-				}
+				scanDistance += Time.deltaTime * scanVelocity;
 			}
 			else
 			{
 				_scanning = false;
-				ScanDistance = 0;
-			}
-
-		}
-
-		if (Input.GetKeyDown(KeyCode.C))
-		{
-			_scanning = true;
-			ScanDistance = 0;
-		}
-
-		if (Input.GetMouseButtonDown(0))
-		{
-			Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
-			RaycastHit hit;
-
-			if (Physics.Raycast(ray, out hit))
-			{
-				_scanning = true;
-				ScanDistance = 0;
-				//ScannerOrigin.position = hit.point;
+				scanDistance = 0;
 			}
 		}
+
+	}
+
+	public void StartScan(Vector3 position)
+	{
+		_scanning = true;
+		scanDistance = 0;
+		scannerOrigin.position = position;
 	}
 	// End Demo Code
 
-	void OnEnable()
+	void Awake()
 	{
-		_camera = Camera.main;
+		if (instance==null)
+		{
+			instance = this;
+		}
 		_camera.depthTextureMode = DepthTextureMode.Depth;
 	}
 
 	[ImageEffectOpaque]
 	void OnRenderImage(RenderTexture src, RenderTexture dst)
 	{
-		EffectMaterial.SetVector("_WorldSpaceScannerPos", initialPosition.position);
-		EffectMaterial.SetFloat("_ScanDistance", ScanDistance);
-		RaycastCornerBlit(src, dst, EffectMaterial);
+		effectMaterial.SetVector("_WorldSpaceScannerPos", scannerOrigin.position);
+		effectMaterial.SetFloat("_ScanDistance", scanDistance);
+		RaycastCornerBlit(src, dst, effectMaterial);
 	}
 
 	void RaycastCornerBlit(RenderTexture source, RenderTexture dest, Material mat)
@@ -147,5 +117,4 @@ public class ScannerEffectDemo : MonoBehaviour
 		GL.End();
 		GL.PopMatrix();
 	}
-	
 }

@@ -5,6 +5,6 @@ public class Interactable : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        SoundWaveEffect.instance.StartScan(transform.position);
+        SoundWaveEffect.instance.StartScan(transform.position, gameObject.GetComponent<Rigidbody>().mass);
     }
 }

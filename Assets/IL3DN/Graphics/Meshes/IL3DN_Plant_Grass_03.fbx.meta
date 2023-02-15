@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ec784c7b88655ec4cb66660887fc5230
+guid: 3af0136a20e74d5b98a5dc5378dd3950
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -27,7 +27,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Default_Grass
-    second: {fileID: 2100000, guid: a1caf223de02ae34384ec42b6f035826, type: 2}
+    second: {fileID: 2100000, guid: 91b316bac09b4ce5bf457cb57e328b3b, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

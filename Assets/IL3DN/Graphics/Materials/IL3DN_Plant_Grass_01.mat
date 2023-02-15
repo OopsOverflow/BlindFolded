@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: IL3DN_Plant_Grass_01
-  m_Shader: {fileID: 4800000, guid: 8bb76156a4f696249ac78cae0f1a0ade, type: 3}
+  m_Shader: {fileID: 4800000, guid: 5cad391d63884782ba54281b5000ee26, type: 3}
   m_ShaderKeywords: EFFECT_HUE_VARIATION GEOM_TYPE_LEAF _BEND_ON _WIGGLE_ON _WIGGLE__WIGGLE_OFF
     _WIND_ON
   m_LightmapFlags: 4
@@ -21,7 +21,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - NoiseTextureFloat:
-        m_Texture: {fileID: 2800000, guid: e5055e0d246bd1047bdb28057a93753c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 67007fc00ef14ba8bc9f0c744bbba373, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -53,7 +53,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: a73c218e0d8156240a793d22710686d1, type: 3}
+        m_Texture: {fileID: 2800000, guid: b739ed61035c4746af614c1518af8a5c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:

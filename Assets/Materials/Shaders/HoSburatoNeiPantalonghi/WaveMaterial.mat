@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: WaveMaterial
-  m_Shader: {fileID: -6465566751694194690, guid: 0733e975cfae64bca94f2b10371317ac, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 131e657d974d4edba8814e742dd90d74, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 2

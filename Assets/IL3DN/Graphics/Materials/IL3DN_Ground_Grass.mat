@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: IL3DN_Ground_Grass
-  m_Shader: {fileID: 4800000, guid: 1cc2f4fe8fa301c498cb10f0bfbacec0, type: 3}
+  m_Shader: {fileID: 4800000, guid: 3e6d18507e4f4a7aa4875ae25c183be8, type: 3}
   m_ShaderKeywords: EFFECT_HUE_VARIATION GEOM_TYPE_LEAF
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0

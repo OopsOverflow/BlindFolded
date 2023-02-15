@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f11e24393ee20a94b9cbfd10c2f99f4a
+guid: a7a413f25f80431aa9490b5c8a7f9151
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -28,12 +28,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Default_Bark
-    second: {fileID: 2100000, guid: 1d97d3e66d3177240ae59310c2388d2b, type: 2}
+    second: {fileID: 2100000, guid: 35e1f132cc1e4830a244a295df69f4da, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Default_Leaves
-    second: {fileID: 2100000, guid: 49a047f6fab4c994cb92aa690ba93401, type: 2}
+    second: {fileID: 2100000, guid: e333e74683ee411a906c35b60f74a452, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

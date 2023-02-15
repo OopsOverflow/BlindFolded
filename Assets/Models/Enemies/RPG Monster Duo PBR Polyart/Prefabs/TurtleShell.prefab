@@ -881,8 +881,8 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1837317425425208}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 1ae824be95fa4b4ea86d8c5ce85bc72d, type: 3}
-  m_Controller: {fileID: 9100000, guid: e87c8d266165422495124ea3dfdd8f89, type: 2}
+  m_Avatar: {fileID: 9000000, guid: d12fb8eee0a64b45a04144f1454796e6, type: 3}
+  m_Controller: {fileID: 9100000, guid: 7a39b8b9bf724859a69539fd2c57da1a, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -901,7 +901,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1837317425425208}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09edb3c1a61d0ac4888acf44a604a6e3, type: 3}
+  m_Script: {fileID: 11500000, guid: 1d1c1d9df5894c879563f14ba8c9d1a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!82 &4344284654810154914
@@ -914,7 +914,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ab48d80b4bf428e42ad9f867f96841a3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c59ef9b8945a4803934e6752ced9c6b3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.377
   m_Pitch: 1
@@ -1009,7 +1009,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1837317425425208}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fafbe0a41fe41f9b0febc3ee76ba08b, type: 3}
+  m_Script: {fileID: 11500000, guid: e909622037c34b2c9b0e5cb76d20eb68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   directBinaural: 1
@@ -1163,7 +1163,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 42f1c55aa7e048848f7af80f402847cb, type: 2}
+  - {fileID: 2100000, guid: fa8bf7acc9f94c0bbf020a09ae916a8f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1188,7 +1188,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 4300000, guid: 1ae824be95fa4b4ea86d8c5ce85bc72d, type: 3}
+  m_Mesh: {fileID: 4300000, guid: d12fb8eee0a64b45a04144f1454796e6, type: 3}
   m_Bones:
   - {fileID: 4958735577281076}
   - {fileID: 4003627468750388}

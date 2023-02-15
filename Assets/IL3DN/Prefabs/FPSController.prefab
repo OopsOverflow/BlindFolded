@@ -62,7 +62,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e35b9de0725819647802f3a74590c59d, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c8fa7614350423aa20b4a2c0594b114, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_IsWalking: 0
@@ -83,10 +83,10 @@ MonoBehaviour:
     lockCursor: 1
   m_StepInterval: 2
   m_FootstepSounds:
-  - {fileID: 8300000, guid: d075dc87c5731f84b9901c46989a8832, type: 3}
-  - {fileID: 8300000, guid: 07d6c79ac5a1e3a4094f31a17377867e, type: 3}
-  m_JumpSound: {fileID: 8300000, guid: 0b5df60ae886e094e98121686439b7da, type: 3}
-  m_LandSound: {fileID: 8300000, guid: 739a2cf7ef547fc409eb9346acf3fe14, type: 3}
+  - {fileID: 8300000, guid: b0a949bc7a21468b9dd2b53628732d2d, type: 3}
+  - {fileID: 8300000, guid: 4222eaa4f75b46e6952cfc0500559f65, type: 3}
+  m_JumpSound: {fileID: 8300000, guid: 7bdce4bd7b17459aabac41e03bf91aff, type: 3}
+  m_LandSound: {fileID: 8300000, guid: 8aa0f66d7c2e470187dc409c4dbe8d7f, type: 3}
 --- !u!54 &5400000
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -112,7 +112,7 @@ AudioSource:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 243825205954821534, guid: 89ef2123a31ebe547959c299198012c1,
+  OutputAudioMixerGroup: {fileID: 243825205954821534, guid: 0a357d26f99649a7848e043aa3c1b75a,
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1

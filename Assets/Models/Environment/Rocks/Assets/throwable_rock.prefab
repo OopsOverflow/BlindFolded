@@ -135,7 +135,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 4294967295
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
@@ -244,8 +244,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79151f9244582f645b57853312bb857a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EffectMaterial: {fileID: 0}
-  ScanDistance: 0
-  ScanVelocity: 50
-  MaxScanDistance: 10
-  initialPosition: {fileID: 0}
+  scannerOrigin: {fileID: 0}
+  effectMaterial: {fileID: 0}
+  wavePool: {fileID: 0}

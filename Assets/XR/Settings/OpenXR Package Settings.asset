@@ -257,10 +257,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f0ebc320a151d3408ea1e9fce54d40e, type: 3}
   m_Name: OpenXR Package Settings
   m_EditorClassIdentifier: 
-  Keys: 0100000007000000
+  Keys: 01000000070000000d000000
   Values:
   - {fileID: 3884774481797951121}
   - {fileID: 4091543249673162623}
+  - {fileID: 3107100926904901968}
 --- !u!114 &2276903651776429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -483,6 +484,21 @@ MonoBehaviour:
   company: Unity
   priority: 0
   required: 0
+--- !u!114 &3107100926904901968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5a1f07dc5afe854f9f12a4194aca3fb, type: 3}
+  m_Name: WebGL
+  m_EditorClassIdentifier: 
+  features: []
+  m_renderMode: 1
+  m_depthSubmissionMode: 0
 --- !u!114 &3187301620329613998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -542,6 +558,7 @@ MonoBehaviour:
   features:
   - {fileID: -8629125593536428803}
   - {fileID: 2513827421198357809}
+  - {fileID: 5114396254949034118}
   - {fileID: 3310320657843835207}
   - {fileID: -6614942900360975235}
   - {fileID: 8445349878970016491}
@@ -554,7 +571,6 @@ MonoBehaviour:
   - {fileID: 2680040989379624580}
   - {fileID: 3948656242854628488}
   - {fileID: 7253519958074554734}
-  - {fileID: 5114396254949034118}
   m_renderMode: 1
   m_depthSubmissionMode: 0
 --- !u!114 &3948656242854628488
@@ -577,7 +593,7 @@ MonoBehaviour:
   company: HTC
   priority: 0
   required: 0
-  m_XrInstance: 0
+  m_XrInstance: 15616501088257
   m_XrSession: 0
   m_systemid: 0
 --- !u!114 &4091543249673162623

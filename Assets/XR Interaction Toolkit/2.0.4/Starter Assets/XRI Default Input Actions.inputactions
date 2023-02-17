@@ -565,10 +565,32 @@
                 },
                 {
                     "name": "",
+                    "id": "3f37f2a0-7d4b-4995-9831-071e593c2330",
+                    "path": "<ViveCosmosController>{LeftHand}/joystick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Noncontinuous Move",
+                    "action": "Turn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "8e383b1a-270f-4c20-819b-89a59cffb498",
                     "path": "<XRController>{LeftHand}/Primary2DAxis",
                     "interactions": "",
                     "processors": "StickDeadzone",
+                    "groups": "Continuous Move",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b2ab865b-52d2-4408-93a4-8afc955c8673",
+                    "path": "<ViveCosmosController>{LeftHand}/joystick",
+                    "interactions": "",
+                    "processors": "",
                     "groups": "Continuous Move",
                     "action": "Move",
                     "isComposite": false,
@@ -1094,8 +1116,30 @@
                 },
                 {
                     "name": "",
+                    "id": "8a5d5903-0fed-44fa-8dfe-3cd09b3060e8",
+                    "path": "<ViveCosmosController>{RightHand}/joystick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Turn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "35353673-d5d5-4c62-87e9-e15b53e808c6",
                     "path": "<XRController>{RightHand}/primary2DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Continuous Move",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d112220d-67d7-474b-9208-840527c72153",
+                    "path": "<ViveCosmosController>{RightHand}/joystick",
                     "interactions": "",
                     "processors": "",
                     "groups": "Continuous Move",

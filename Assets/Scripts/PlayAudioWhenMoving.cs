@@ -1,29 +1,41 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayAudioWhenMoving : MonoBehaviour
 {
-    private AudioSource audioSource;
+    private AudioSource _audioSource;
+    private Rigidbody _rigidbody;
+    private bool _isCooldownFinished = true;
 
     private void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        _audioSource = GetComponent<AudioSource>();
+        _rigidbody = GetComponent<Rigidbody>();
     }
 
     private void Update()
     {
-        if (GetComponent<Rigidbody>().velocity.magnitude > 0)
+        if (_rigidbody.velocity.magnitude > 4 && _rigidbody.isKinematic)
         {
-            if (!audioSource.isPlaying)
+            if (!_audioSource.isPlaying && _isCooldownFinished)
             {
-                audioSource.Play();
+                _audioSource.Play();
+                _isCooldownFinished = false;
+                StartCoroutine(CooldownSwingCoRoutine(0.1f));
             }
         }
         else
         {
-            if (audioSource.isPlaying)
+            if (_audioSource.isPlaying && !_rigidbody.isKinematic)
             {
-                audioSource.Stop();
+                _audioSource.Stop();
             }
         }
+    }
+
+    private IEnumerator CooldownSwingCoRoutine(float cooldownTime)
+    {
+        yield return new WaitForSeconds(cooldownTime);
+        _isCooldownFinished = true;
     }
 }

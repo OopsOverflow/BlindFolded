@@ -1,23 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PlaySoundWhenMoving : MonoBehaviour
+public class PlayAudioWhenMoving : MonoBehaviour
 {
     private AudioSource audioSource;
-    private Animator animator;
 
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
-        if (animator.GetBool("isMoving"))
+        if (GetComponent<Rigidbody>().velocity.magnitude > 0)
         {
-            Debug.Log("playing music");
             if (!audioSource.isPlaying)
             {
                 audioSource.Play();

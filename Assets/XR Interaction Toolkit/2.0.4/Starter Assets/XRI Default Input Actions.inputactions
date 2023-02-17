@@ -487,6 +487,17 @@
                     "action": "Menu",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ab01c6e7-1164-475b-b552-3c41e2d1c147",
+                    "path": "<ViveFocus3Controller>{LeftHand}/menu",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },

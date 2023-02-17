@@ -469,29 +469,7 @@
                 {
                     "name": "",
                     "id": "a8cc98a1-cfda-4eb8-8cc7-afb054e1b8db",
-                    "path": "<XRController>{LeftHand}/{menuButton}",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Menu",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "2b98289e-6e89-4fd4-881b-b5e28c97e03a",
-                    "path": "<ViveCosmosController>{LeftHand}/menu",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Menu",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "ab01c6e7-1164-475b-b552-3c41e2d1c147",
-                    "path": "<ViveFocus3Controller>{LeftHand}/menu",
+                    "path": "<XRController>{LeftHand}/primaryButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

@@ -14,7 +14,7 @@ public class PlayAudioWhenMoving : MonoBehaviour
 
     private void Update()
     {
-        if (_rigidbody.velocity.magnitude > 4 && _rigidbody.isKinematic)
+        if (_rigidbody.velocity.magnitude > 6 && _rigidbody.isKinematic)
         {
            if(_isInCooldown) return;
            SwordEffect.instance.SpawnSound(gameObject.transform.position);

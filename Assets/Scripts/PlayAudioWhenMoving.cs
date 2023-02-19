@@ -1,15 +1,14 @@
 using System.Collections;
+using AudioSourceSpawn;
 using UnityEngine;
 
 public class PlayAudioWhenMoving : MonoBehaviour
 {
-    private AudioSource _audioSource;
     private Rigidbody _rigidbody;
-    private bool _isCooldownFinished = true;
-
+    private float _cooldown = 0.5f;
+    private bool _isInCooldown = false;
     private void Start()
     {
-        _audioSource = GetComponent<AudioSource>();
         _rigidbody = GetComponent<Rigidbody>();
     }
 
@@ -17,25 +16,16 @@ public class PlayAudioWhenMoving : MonoBehaviour
     {
         if (_rigidbody.velocity.magnitude > 4 && _rigidbody.isKinematic)
         {
-            if (!_audioSource.isPlaying && _isCooldownFinished)
-            {
-                _audioSource.Play();
-                _isCooldownFinished = false;
-                StartCoroutine(CooldownSwingCoRoutine(0.1f));
-            }
-        }
-        else
-        {
-            if (_audioSource.isPlaying && !_rigidbody.isKinematic)
-            {
-                _audioSource.Stop();
-            }
+           if(_isInCooldown) return;
+           SwordEffect.instance.SpawnSound(gameObject.transform.position);
+           _isInCooldown = true;
+            StartCoroutine(CooldownSwordCoRoutine(_cooldown));
         }
     }
-
-    private IEnumerator CooldownSwingCoRoutine(float cooldownTime)
+    
+    private IEnumerator CooldownSwordCoRoutine(float cooldownTime)
     {
         yield return new WaitForSeconds(cooldownTime);
-        _isCooldownFinished = true;
+        _isInCooldown = false;
     }
 }

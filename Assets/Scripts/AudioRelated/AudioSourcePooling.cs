@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace AudioSourceSpawn
+namespace AudioRelated
 {
     public class AudioSourcePooling : MonoBehaviour
     {
@@ -16,3 +16,4 @@ namespace AudioSourceSpawn
         }
     }
 }
+    

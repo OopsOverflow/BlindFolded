@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace AudioSourceSpawn
+namespace AudioRelated
 {
     public class AudioPropagator : MonoBehaviour
     {

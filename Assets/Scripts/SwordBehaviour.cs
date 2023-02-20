@@ -20,9 +20,9 @@ public class SwordBehaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer.Equals(7))
+        if (other.gameObject.layer.Equals(7)) // Layer 7 is for 'hittable' objects
         {
-            GetComponent<Renderer>().material.color = Color.green;
+            GetComponent<Renderer>().material.color = Color.red;
         }
     }
 
@@ -33,6 +33,6 @@ public class SwordBehaviour : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        GetComponent<Renderer>().material.color = Color.white;
+        //GetComponent<Renderer>().material.color = Color.white;
     }
 }

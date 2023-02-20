@@ -12,12 +12,14 @@ public class SlimeBehaviour : MonoBehaviour
     [SerializeField] public NavMeshAgent agent; // The NavMeshAgent component assigned to this GameObject
     private Animator animator;
     private int currentLifePoints;
+    private bool dead;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         currentLifePoints = maxLifePoints;
+        dead = false;
     }
 
     // Update is called once per frame
@@ -28,10 +30,10 @@ public class SlimeBehaviour : MonoBehaviour
 
     void FixedUpdate()
     {
-        chasePlayer();
+        ChasePlayer();
     }
 
-    private void chasePlayer()
+    private void ChasePlayer()
     {
         // Get the distance between the player and enemy (this object)
         float distance = Vector3.Distance(chaseTarget.position, transform.position);
@@ -46,8 +48,16 @@ public class SlimeBehaviour : MonoBehaviour
         }
     }
 
-    public void tookDamage(int dmg)
+    public void TakeDamage(int dmg)
     {
         currentLifePoints -= dmg;
+        if (currentLifePoints <= 0) {
+            dead = true;
+            gameObject.SetActive(false);
+        }
+    }
+
+    public bool isDead() {
+        return dead;
     }
 }

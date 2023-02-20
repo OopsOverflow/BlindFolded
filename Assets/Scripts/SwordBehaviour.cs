@@ -6,10 +6,12 @@ using UnityEngine;
 
 public class SwordBehaviour : MonoBehaviour
 {
+    private Renderer renderer;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        renderer = GetComponent<Renderer>();
     }
 
     // Update is called once per frame
@@ -22,13 +24,23 @@ public class SwordBehaviour : MonoBehaviour
     {
         if (other.gameObject.layer.Equals(7)) // Layer 7 is for 'hittable' objects
         {
-            GetComponent<Renderer>().material.color = Color.red;
+            renderer.material.color = Color.red;
+            SlimeBehaviour slimeBehaviour = other.GetComponent<SlimeBehaviour>();
+            if (slimeBehaviour != null)
+            {
+                slimeBehaviour.TakeDamage(50);
+                
+                // Reset sword's color to normal when enemy dies
+                if(slimeBehaviour.isDead()) {
+                    renderer.material.color = Color.white;
+                }
+            }
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        GetComponent<Renderer>().material.color = Color.white;
+        renderer.material.color = Color.white;
     }
 
     private void OnTriggerStay(Collider other)

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using AudioRelated;
 
 public class SlimeBehaviour : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class SlimeBehaviour : MonoBehaviour
     private Animator animator;
     private int currentLifePoints;
     private bool dead;
+    private AudioSource hitAudio;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +22,7 @@ public class SlimeBehaviour : MonoBehaviour
         animator = GetComponent<Animator>();
         currentLifePoints = maxLifePoints;
         dead = false;
+        hitAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -51,10 +54,14 @@ public class SlimeBehaviour : MonoBehaviour
     public void TakeDamage(int dmg)
     {
         currentLifePoints -= dmg;
+
+        hitAudio.Play();
+
         if (currentLifePoints <= 0) {
             dead = true;
             gameObject.SetActive(false);
         }
+        
     }
 
     public bool isDead() {

@@ -20,7 +20,7 @@ public class TeleportCooldown : MonoBehaviour
 
     public bool isInCooldown = false;
 
-    private float _cooldownValue = 2.0f;
+    private float _cooldownValue = 0.5f;
     
     private float _startTime;
 

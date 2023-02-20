@@ -37,7 +37,6 @@ public class SwordBehaviour : MonoBehaviour
                 if(slimeBehaviour.isDead()) {
                     renderer.material.color = Color.white;
                     outline.OutlineColor = Color.white;
-
                 }
             }
         }

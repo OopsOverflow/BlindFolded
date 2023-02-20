@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PlayerState : MonoBehaviour
 {
-    [SerializeField] public int maxLifePoints;
+    public int maxLifePoints;
+    public TextMeshProUGUI lifePointsText;
 
     private int currentLifePoints;
 
@@ -12,6 +15,7 @@ public class PlayerState : MonoBehaviour
     void Start()
     {
         currentLifePoints = maxLifePoints;
+        lifePointsText.text = currentLifePoints.ToString();
     }
 
     // Update is called once per frame
@@ -20,18 +24,22 @@ public class PlayerState : MonoBehaviour
         
     }
 
-    public void tookDamage(int dmg)
+    public void TakeDamage(int dmg)
     {
         currentLifePoints -= dmg;
+
+        if(currentLifePoints <= 0) {
+            SceneManager.LoadScene("Menu Scene");
+        }
     }
 
-    void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        foreach (ContactPoint contact in collision.contacts)
+        if (other.gameObject.layer.Equals(7)) // Layer 7 is for 'hittable' objects
         {
-            Debug.DrawRay(contact.point, contact.normal, Color.white);
+            other.gameObject.GetComponent<Rigidbody>().AddForce(-other.gameObject.transform.forward * 5, ForceMode.Impulse);
+            TakeDamage(50);
+            lifePointsText.text = currentLifePoints.ToString();
         }
-        Debug.Log("Player was hit");
-        
     }
 }

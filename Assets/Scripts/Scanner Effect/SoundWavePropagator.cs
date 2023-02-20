@@ -9,7 +9,7 @@ namespace Scanner_Effect
         public float maxScanDistance;
         public float scanVelocity = 50;
         private bool _scanning = false;
-        public ObjectPooling pool;
+        public SoundWavePooling pool;
 
         private void Update()
         {

@@ -6,10 +6,8 @@ using UnityEngine.Serialization;
 [ExecuteInEditMode]
 public class SoundWaveEffect : MonoBehaviour
 {
-	public Transform scannerOrigin;
-	public Material effectMaterial;
 	public static SoundWaveEffect instance;
-	public ObjectPooling wavePool;
+	public SoundWavePooling wavePool;
 	
 	public void StartScan(Vector3 position, float mass)
 	{

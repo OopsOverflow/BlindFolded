@@ -32,7 +32,7 @@ public class WristMenu : MonoBehaviour
 
     public void ResumeGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
         wristUICanvas.SetActive(false);
     }
 }

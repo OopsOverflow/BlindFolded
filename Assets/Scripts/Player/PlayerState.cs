@@ -29,7 +29,7 @@ public class PlayerState : MonoBehaviour
         currentLifePoints -= dmg;
 
         if(currentLifePoints <= 0) {
-            SceneManager.LoadScene("Menu Scene");
+            SceneManager.LoadScene("GameOver Scene");
         }
     }
 

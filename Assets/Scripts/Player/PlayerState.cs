@@ -41,5 +41,10 @@ public class PlayerState : MonoBehaviour
             TakeDamage(50);
             lifePointsText.text = currentLifePoints.ToString();
         }
+
+        if (other.CompareTag("Finish"))
+        {
+            SceneManager.LoadScene("Victory Scene");
+        }
     }
 }

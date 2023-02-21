@@ -17,7 +17,7 @@ public class SlimeBehaviour : MonoBehaviour
     private AudioSource hitAudio;
     private bool _isCooldownFinished = true;
     private float _cooldown = 3f;
-    private float _soundCooldown = 0.5f;
+    private float _soundCooldown = 0.2f;
     private bool _isInCooldown = false;
 
 

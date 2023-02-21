@@ -34,7 +34,7 @@ public class SwordBehaviour : MonoBehaviour
                 slimeBehaviour.TakeDamage(50);
 
                 // Reset sword's color to normal when enemy dies
-                if(slimeBehaviour.isDead()) {
+                if(slimeBehaviour.IsDead()) {
                     renderer.material.color = Color.white;
                     outline.OutlineColor = Color.white;
                 }

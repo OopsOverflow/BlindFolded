@@ -15,6 +15,11 @@ public class SlimeBehaviour : MonoBehaviour
     private int currentLifePoints;
     private bool dead;
     private AudioSource hitAudio;
+    private bool _isCooldownFinished = true;
+    private float _cooldown = 3f;
+    private float _soundCooldown = 0.5f;
+    private bool _isInCooldown = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -24,14 +29,22 @@ public class SlimeBehaviour : MonoBehaviour
         dead = false;
         hitAudio = GetComponent<AudioSource>();
     }
-
+    
+    private IEnumerator CooldownStepCoRoutine(float cooldownTime)
+    {
+        yield return new WaitForSeconds(cooldownTime);
+        _isCooldownFinished = true;
+    }
     // Update is called once per frame
     void Update()
     {
-        
+        if(!_isCooldownFinished) return;
+            SoundWaveEffect.instance.StartScan(gameObject.transform.position, 1f);
+            _isCooldownFinished = false;
+            StartCoroutine(CooldownStepCoRoutine(_cooldown));
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         ChasePlayer();
     }
@@ -39,7 +52,7 @@ public class SlimeBehaviour : MonoBehaviour
     private void ChasePlayer()
     {
         // Get the distance between the player and enemy (this object)
-        float distance = Vector3.Distance(chaseTarget.position, transform.position);
+        var distance = Vector3.Distance(chaseTarget.position, transform.position);
 
         // Check if it is within the range
         if(distance <= maxVisibility && distance >= minVisibility)
@@ -53,6 +66,10 @@ public class SlimeBehaviour : MonoBehaviour
 
     public void TakeDamage(int dmg)
     {
+        if(_isInCooldown) return;
+        SwordEffect.instance.SpawnSound(gameObject.transform.position);
+        _isInCooldown = true;
+        StartCoroutine(CooldownSwordCoRoutine(_soundCooldown));
         currentLifePoints -= dmg;
 
         hitAudio.Play();
@@ -64,7 +81,14 @@ public class SlimeBehaviour : MonoBehaviour
         
     }
 
-    public bool isDead() {
+    public bool IsDead() {
         return dead;
     }
+    
+    private IEnumerator CooldownSwordCoRoutine(float cooldownTime)
+    {
+        yield return new WaitForSeconds(cooldownTime);
+        _isInCooldown = false;
+    }
+    
 }
